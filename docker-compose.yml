@@ -1,0 +1,12 @@
+# Local MongoDB for development:  docker compose up -d
+# Data is kept in the "mongo-data" volume between restarts.
+services:
+  mongo:
+    image: mongo:7
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:27017:27017"   # only reachable from this computer
+    volumes:
+      - mongo-data:/data/db
+volumes:
+  mongo-data:

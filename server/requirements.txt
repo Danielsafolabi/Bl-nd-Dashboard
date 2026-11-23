@@ -1,0 +1,7 @@
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pymongo>=4.6
+# demo mode without a MongoDB install (BLIND_MONGO_URI=mongomock://) and tests
+mongomock>=4.1
+httpx>=0.27
+pytest>=8
